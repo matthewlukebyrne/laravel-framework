@@ -1,101 +1,62 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <title>Order Stackz</title>
-
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
-
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-
     <!-- Blade syntax for PHP templating -->
     <!-- Passing dynamic data through to the view exactly like Django -->
+    {{-- Extending and yielding the file in the layout page --}}
+    @extends('layouts.layout')
+    @section('content')  
     <body>
         <div class="flex-center position-ref full-height">
-           
-            
-
             <div class="content">
-                <a href="/">Main</a>
+                <div class="links">
+                    <a href="/">Home</a>
+                </div>
                 <div class="title m-b-md">
                     Stacks List
                 </div>
-                <p>{{ $framework }}</p>
-                <p>{{ $language }}</p>
-                @if($level > 10)
-                    <p>this level may be too high for you! Take it easy!</p>
+
+                {{-- For loop on the data in the Array --}}
+                @foreach ($stacks as $stack)
+                    <div>
+                        {{ $loop->index }} {{ $stack['framework'] }} - {{ $stack['language']}} 
+                        @if ($loop->first)
+                            <span>- first in the loop</span>
+                        @endif
+                        @if ($loop->last)
+                            <span>- this is the last</span>
+                        @endif
+                    </div>
+                @endforeach
+
+                
+
+                
+                {{-- @for ($i = 0; $i < count($stacks); $i++)
+                    <p>{{ $stacks[$i]['framework'] }}</p>
+                @endfor  --}}
+
+                {{-- Using loops in Blade in PHP --}}
+                {{-- @for ($i = 0; $i < 5; $i++)
+                    <p>the value of i is {{ $i }}</p>
+                @endfor --}}
+
+                {{-- @if($level > 15)
+                    <p>This level may be too high for you! Take it easy partner!</p>
                 @elseif($level < 5)
-                    <p>this level is too easy Challenge yourself!</p>
+                    <p>This level is too easy. Challenge yourself!</p>
                 @else
-                    <p>This level is perfect.</p>
+                    <p>This level is perfect for you.</p>
                 @endif
 
-                @unless($language == 'JavaScript')
-                    <p>you do not have enough JavaScript behind you!</p>
-                @endunless
+                {{-- Kind of the opposite to unless / unless this is true / opposite of a if check --}}
+                {{-- @unless($language == 'JavaScript')
+                    <p>You do not have enough JavaScript behind you!</p>
+                @endunless --}}
                 
-                {{-- Output regualr vanilla PHP (pretty handy) --}}
-                @php
+                {{-- Output regular vanilla PHP (pretty handy) --}}
+                {{-- @php
                     $name = 'matt';
                     echo($name);
-                @endphp
+                @endphp --}} 
+
             </div>
         </div>
-    </body>
-</html>
+        @endsection
