@@ -7,7 +7,29 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
-## About Laravel
+## About Laravel 101
+## Stacks App
+
+1. Installation - <code>php artisan serve</code>
+2. Basics = Routes, Views
+3. Passing data to views
+4. Blade Basics
+5. Blade Loops
+6. Layout Files
+7. CSS & Images
+8. Query Parameters
+9. Route Parameters Wildcards {{ $id }}
+10.Controllers - Switched logic to <code>php artisan make:controller StackController</code>
+11. Connect to MySql (ENV Variables, mySql, command)
+12. Migration Basics
+13. Eloquent Models
+14. MVC Naming Conventions (Update)
+15. Getting a single record
+17. Web Form Submission
+18. Post Request (Cross Site Forgery Token)
+19. Arrays and JSON data (extra field added)
+20. Removing records (DELETE)
+
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 

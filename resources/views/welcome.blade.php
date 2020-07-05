@@ -17,16 +17,22 @@
                 </div>
             @endif
 
+            <div class="flex-center position-ref full-height">
             <div class="content">
                 <img src="/img/weblogo_laravel.png" alt="webquestionaire" class="main-img">
-                <div class="title m-b-md">
-                    Stacks Questionaire Selector<br />
-                    FrameWorks
-                </div>
-
                 <div class="links">
-                    <a href="/stacks">Click to enter</a>
+                    <a href="/stacks/create">Click to Create</a>
+                </div>
+                <div class="title m-b-md">
+                    Pick Your Stack<br />
+                    framework selector
+                </div>
+                <p class="mssg">{{ session('mssg') }}</p>
+                <div class="links">
+                    <a href="/stacks">Stack List</a>
                 </div>
             </div>
         </div>
+        </div>
+    
         @endsection

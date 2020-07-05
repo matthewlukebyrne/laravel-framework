@@ -13,30 +13,33 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// SIMPLE ROUTE HANDLERS
-// dynamically inject values and data into a view
+// dynamically inject values and data into a view (if you want!)
+// Now coming from the Stack Controller page passed through
+// Pass through the stack controller and then call the appropiate action of "index" or "show"
 
-// Root route page function
+// Landing Page
 Route::get('/', function () {
     return view('welcome');
 });
 
+// Stacks Page
+Route::get('/stacks', 'StackController@index');
 
-// Set up a brand new route to return a view (new page)
-// You can return text or json also through a array below (gets converted to JSON)
-Route::get('/stacks', function () {
-    // Get data from the database (soon on a forloop)
-    $stacks = [
-        ['framework' => 'React', 'language' => 'JavaScript'],
-        ['framework' => 'Django', 'language' => 'Python'],
-        ['framework' => 'Laravel', 'language' => 'PHP'],
-        ['framework' => 'Angular', 'language' => 'TypeScript'],
-        ['framework' => 'Vue', 'language' => 'JavaScript'],
-        ['framework' => 'Flask', 'language' => 'Python']
-    ];
-    // Pass that data into the view to then be used in dynamic data
-    return view('stacks', ['stacks' => $stacks]);
-});
+// Create a new framework (adds!)
+Route::get('/stacks/create', 'StackController@create');
+
+// Adding a post route
+Route::post('/stacks', 'StackController@store');
+
+// Id of Stacks page
+Route::get('/stacks/{id}', 'StackController@show');
+
+// Delete Handler
+Route::delete('/stacks/{id}', 'StackController@destroy');
+
+
+
+
 
 
 

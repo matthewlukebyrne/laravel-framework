@@ -1,5 +1,4 @@
-html,
-body {
+html, body {
   background-color: #fff;
   color: #636b6f;
   font-family: 'Nunito', sans-serif;
@@ -46,7 +45,7 @@ body {
   margin-bottom: 30px;
 }
 
-footer {
+footer{
   background: #e3e3e3;
   padding: 20px;
   text-align: center;
@@ -60,7 +59,7 @@ footer {
   color: #333;
 }
 
-.wrapper {
+.wrapper{
   max-width: 1140px;
   padding: 10px;
   margin: 20px auto;
@@ -71,63 +70,63 @@ footer {
   height: 40%;
 }
 
+
 /* stack create form */
 
-.create-stack {
+.create-stack{
   background: #f7f7f7;
   padding: 20px;
   text-transform: lowercase;
-}
 
-.create-stack h1 {
-  font-size: 1rem;
-  font-weight: 100;
-}
+  h1{
+    font-size: 1rem;
+    font-weight: 100;
+  }
 
-.create-stack label,
-.create-stack select {
-  display: block;
-  margin: auto;
-}
+  label, select{
+    display: block;
+    margin: auto;
+  }
 
-.create-stack label {
-  margin-top: 30px;
-}
+  label{
+    margin-top: 30px;
+  }
 
-.create-stack select {
-  padding: 8px;
-  width: 500px;
-}
+  select{
+    padding: 8px;
+    width: 500px;
+  }
 
-.create-stack input[type=submit] {
-  background: #5e2195;
-  padding: 8px 20px;
-  color: #fff;
-  border: 0;
-  margin-top: 20px;
+  input[type=submit]{
+    background: #5e2195;
+    padding: 8px 20px;
+    color: #fff;
+    border: 0;
+    margin-top: 20px;
+  }
+
 }
 
 /* pizza details page */
 
-.stack-details {
+.stack-details{
   background: #f7f7f7;
   padding: 20px;
-}
 
-.stack-details p {
-  margin: 20px 0;
-  font-weight: 100;
+  p{
+    margin: 20px 0;
+    font-weight: 100;
+  }
+  
+  button{
+    background: #333;
+    padding: 8px 20px;
+    color: #fff;
+    border: 0;
+    margin-top: 20px;
+  }
 }
-
-.stack-details button {
-  background: #333;
-  padding: 8px 20px;
-  color: #fff;
-  border: 0;
-  margin-top: 20px;
-}
-
-a.back {
+a.back{
   display: block;
   text-align: center;
   margin-top: 30px;
@@ -137,29 +136,26 @@ a.back {
 
 /* stack index page */
 
-.stack-index h1 {
-  margin-bottom: 40px;
+.stack-index{
+  h1{
+    margin-bottom: 40px;
+  }
+  .stack-item{
+    margin: 10px 0;
+    padding: 12px;
+    background: #f4f4f4;
+    img{
+      width: 60px;
+      display: inline-block;
+    }
+    h4{
+      display: inline-block;
+      font-weight: normal;
+      margin-left: 20px;
+      a{
+        color: #777;
+        text-decoration: none !important;
+      }
+    }
+  }
 }
-
-.stack-index .stack-item {
-  margin: 10px 0;
-  padding: 12px;
-  background: #f4f4f4;
-}
-
-.stack-index .stack-item img {
-  width: 60px;
-  display: inline-block;
-}
-
-.stack-index .stack-item h4 {
-  display: inline-block;
-  font-weight: normal;
-  margin-left: 20px;
-}
-
-.stack-index .stack-item h4 a {
-  color: #777;
-  text-decoration: none !important;
-}
-

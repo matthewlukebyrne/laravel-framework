@@ -13,16 +13,17 @@
                     Stacks List
                 </div>
 
+                {{-- Output the name variable on the query paramter below --}}
+                {{-- http://localhost:8000/stacks?name=mario --}}
+                {{-- http://localhost:8000/stacks?name=steve&age=30 --}}
+                {{ $name }}
+                {{ $age }}
+
                 {{-- For loop on the data in the Array --}}
+                {{-- Now updated and converted into a object from the mySql database --}}
                 @foreach ($stacks as $stack)
                     <div>
-                        {{ $loop->index }} {{ $stack['framework'] }} - {{ $stack['language']}} 
-                        @if ($loop->first)
-                            <span>- first in the loop</span>
-                        @endif
-                        @if ($loop->last)
-                            <span>- this is the last</span>
-                        @endif
+                        {{ $stack->name }} - {{ $stack->framework }} - {{ $stack->language }}
                     </div>
                 @endforeach
 

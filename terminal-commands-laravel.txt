@@ -1,2 +1,27 @@
 # Serve up localhost:8000
-php artisan serve
+php artisan serve - Run on 8000
+
+# Migrations
+php artisan make:migration create_stacks_table
+php artisan migrate (running the up method inside)
+php artisan migrate:fresh (drop and update)
+
+# Laravel Help + More Commands
+php artisan (index of commands)
+php artisan migrate:status
+php artisan migrate:rollback (rollbacks all)
+
+# Make new Controller
+php artisan serve StackController
+
+# mySql Login (Php MyAdmin)
+php mysql -u root (login)
+
+# Eloquent Model (Laravel Feature)
+php artisan make:model Stack
+
+# Particular Naming Conventions in Laravel (logical sense)
+landing page = index
+certain id = show
+create page = create
+
