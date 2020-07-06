@@ -29,7 +29,7 @@
 17. Web Form Submission
 18. Post Request (Cross Site Forgery Token)
 19. Arrays and JSON data (extra field added)
-20. Removing records (DELETE)
+20. Removing records (DESTROY)
 21. SCSS files with Node-Sass Setup
 22. <code>composer require laravel/ui</code>
 23. <code>php artisan ui vue --auth</code> 
