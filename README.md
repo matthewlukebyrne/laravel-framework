@@ -10,7 +10,7 @@
 ## About Laravel 101
 ## Stacks Selector Application
 
-![stacks](Shot5.png)
+![stacks](shot5.png)
 
 1. Installation - <code>php artisan serve</code>
 2. Basics = Routes, Views
