@@ -1,12 +1,12 @@
-    <!-- Blade syntax for PHP templating -->
-    @extends('layouts.layout')
+<!-- Blade syntax for PHP templating -->
+@extends('layouts.layout')
     @section('content')  
     <body>
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                        <a href="{{ url('/home') }}">Home</a>
+                        <a href="{{ url('/home') }}">User Logged In</a>
                     @else
                         <a href="{{ route('login') }}">Login</a>
 
@@ -21,18 +21,18 @@
             <div class="content">
                 <img src="/img/weblogo_laravel.png" alt="webquestionaire" class="main-img">
                 <div class="links">
-                    <a href="/stacks/create">Click to Create</a>
+                    {{-- Pass in the named route --}}
+                    <a href="{{ route('stacks.create') }}">Create List</a>
                 </div>
                 <div class="title m-b-md">
-                    Pick Your Stack<br />
-                    framework selector
+                    Pick Your project<br />
+                    stack selector
                 </div>
                 <p class="mssg">{{ session('mssg') }}</p>
                 <div class="links">
-                    <a href="/stacks">Stack List</a>
+                    <a href="{{ route('stacks.store') }}">Stack List</a>
                 </div>
             </div>
         </div>
-        </div>
-    
-        @endsection
+    </div>
+@endsection

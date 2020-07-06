@@ -8,7 +8,7 @@
 </p>
 
 ## About Laravel 101
-## Stacks App
+## Stacks Selector Application
 
 1. Installation - <code>php artisan serve</code>
 2. Basics = Routes, Views
@@ -16,7 +16,7 @@
 4. Blade Basics
 5. Blade Loops
 6. Layout Files
-7. CSS & Images
+7. CSS & Images Folders
 8. Query Parameters
 9. Route Parameters Wildcards {{ $id }}
 10.Controllers - Switched logic to <code>php artisan make:controller StackController</code>
@@ -29,7 +29,11 @@
 18. Post Request (Cross Site Forgery Token)
 19. Arrays and JSON data (extra field added)
 20. Removing records (DELETE)
-
+21. SCSS files with Node-Sass Setup
+22. <code>composer require laravel/ui</code> auth
+23. <code>php artisan ui vue --auth</code> laravel auth
+24. Route protection <code>->middleware('auth');</code>
+25. Named Routes <code>{{ route('stacks.create') }}</code>
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 

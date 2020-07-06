@@ -7,6 +7,11 @@ use App\Stacks;
 
 class StackController extends Controller
 {
+    // This feature will apply middleware to every single one!
+    // public function __construct(){
+    //     $this->middleware('auth');
+    // }
+
     public function index(){
     // Get data from the database
     // Other conditions you can use with eloquent models

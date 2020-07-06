@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Order Stackz</title>
+        <title>Stack Selector</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -17,7 +17,7 @@
       @yield('content')
 
       <footer>
-        Copyright &copy; 2020
+        Copyright &copy; Matthew Byrne 2020
       </footer>
     </body>
 </html>

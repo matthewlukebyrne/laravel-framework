@@ -27,16 +27,11 @@ html, body {
   top: 18px;
 }
 
-.content {
-  text-align: center;
-}
-
 .links > a {
   color: #636b6f;
-  padding: 0 25px;
   font-size: 13px;
-  font-weight: 100;
-  letter-spacing: .1rem;
+  font-weight: 300;
+  letter-spacing: .3rem;
   text-decoration: none;
   text-transform: lowercase;
 }
@@ -52,7 +47,8 @@ footer{
 }
 
 .title {
-  font-size: 50px;
+  font-size: 6rem;
+  letter-spacing: .3rem;
   text-transform: lowercase;
   border-bottom: 2px solid;
   padding: 12px 0;
@@ -66,8 +62,8 @@ footer{
 }
 
 .main-img {
-  width: 40%;
-  height: 40%;
+  width: 50%;
+  height: 50%;
 }
 
 
@@ -75,66 +71,84 @@ footer{
 
 .create-stack{
   background: #f7f7f7;
-  padding: 20px;
+  padding: 10px;
   text-transform: lowercase;
 
   h1{
-    font-size: 1rem;
+    font-size: 3rem;
     font-weight: 100;
   }
 
   label, select{
-    display: block;
-    margin: auto;
+    width: 500px;
   }
 
   label{
-    margin-top: 30px;
+    margin-top: 10px;
+    margin-left: auto;
+  }
+
+  input{
+    margin-top: 10px;
+    width: 200px;
   }
 
   select{
     padding: 8px;
-    width: 500px;
+    width: 900px;
+    padding-bottom: 1rem;
   }
 
   input[type=submit]{
-    background: #5e2195;
-    padding: 8px 20px;
-    color: #fff;
-    border: 0;
-    margin-top: 20px;
-  }
-
-}
-
-/* pizza details page */
-
-.stack-details{
-  background: #f7f7f7;
-  padding: 20px;
-
-  p{
-    margin: 20px 0;
-    font-weight: 100;
-  }
-  
-  button{
     background: #333;
     padding: 8px 20px;
     color: #fff;
     border: 0;
     margin-top: 20px;
   }
+  
+  fieldset {
+    padding-top: 1rem;
+    border: 0;
+    text-align: left;
+  }
+
 }
+
+/* (single project listing page) */
+
+.stack-details{
+  background: #f7f7f7;
+  padding: 20px;
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  p{
+    padding-top: 1rem;
+    font-size: 1rem;
+    font-weight: 100;
+  }
+  
+  button{
+    background: green;
+    padding: 8px 20px;
+    color: #fff;
+    border: 0;
+    margin-top: 20px;
+  }
+}
+
 a.back{
   display: block;
   text-align: center;
   margin-top: 30px;
-  color: #5e2195;
+  color: #333;
   margin-bottom: 20px;
 }
 
-/* stack index page */
+/* stack index (list projects page) */
 
 .stack-index{
   h1{
@@ -150,8 +164,9 @@ a.back{
     }
     h4{
       display: inline-block;
-      font-weight: normal;
-      margin-left: 20px;
+      font-weight: 100;
+      font-size: 2rem;
+      margin-left: 2rem;
       a{
         color: #777;
         text-decoration: none !important;

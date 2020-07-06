@@ -22,24 +22,23 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Stacks Page
-Route::get('/stacks', 'StackController@index');
-
+// Stacks Page + Added Middleware for the route from Laravel!
+// Also added name routes - ->name('stacks.index')
+Route::get('/stacks', 'StackController@index')->name('stacks.index')->middleware('auth');
 // Create a new framework (adds!)
-Route::get('/stacks/create', 'StackController@create');
-
+Route::get('/stacks/new/create', 'StackController@create')->name('stacks.create')->middleware('auth');
 // Adding a post route
-Route::post('/stacks', 'StackController@store');
-
+Route::post('/stacks', 'StackController@store')->name('stacks.store');
 // Id of Stacks page
-Route::get('/stacks/{id}', 'StackController@show');
-
+Route::get('/stacks/{id}', 'StackController@show')->name('stacks.show')->middleware('auth');
 // Delete Handler
-Route::delete('/stacks/{id}', 'StackController@destroy');
+Route::delete('/stacks/{id}', 'StackController@destroy')->name('stacks.destroy')->middleware('auth');
 
 
 
 
 
 
+Auth::routes();
 
+Route::get('/home', 'HomeController@index')->name('home');

@@ -25,3 +25,8 @@ landing page = index
 certain id = show
 create page = create
 
+# Installing the auth laravel package straight out
+<code>composer require laravel/ui</code>
+
+# View All Routes in Terminal
+php artisan route:list
