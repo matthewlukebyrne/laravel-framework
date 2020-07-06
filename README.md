@@ -11,7 +11,7 @@
 
 ![stacks](shot5.png)
 
-1. Installation - <code>php artisan serve</code>
+1. Installation - <code>php artisan serve</code> to run localhost:8000
 2. Basics = Routes, Views
 3. Passing data to views
 4. Blade Basics
