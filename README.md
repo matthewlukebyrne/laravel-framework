@@ -31,8 +31,8 @@
 19. Arrays and JSON data (extra field added)
 20. Removing records (DELETE)
 21. SCSS files with Node-Sass Setup
-22. <code>composer require laravel/ui</code> auth
-23. <code>php artisan ui vue --auth</code> laravel auth
+22. <code>composer require laravel/ui</code>
+23. <code>php artisan ui vue --auth</code> 
 24. Route protection <code>->middleware('auth');</code>
 25. Named Routes <code>{{ route('stacks.create') }}</code>
 
